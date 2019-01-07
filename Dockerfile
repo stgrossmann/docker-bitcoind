@@ -17,7 +17,7 @@ RUN set -ex \
   && tar -xzvf bitcoin-${BTC_VERSION}.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
   && rm -rf /tmp/*
 
-RUN groupadd -g 1000 bitcoin && useradd -u 1000 -G bitcoin -s /bin/sh -D bitcoin
+RUN groupadd -g 1000 bitcoin && useradd -m -u 1000 -g bitcoin -s /bin/sh bitcoin
 
 USER bitcoin
 
