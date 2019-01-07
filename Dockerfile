@@ -17,17 +17,14 @@ RUN set -ex \
   && tar -xzvf bitcoin-${BTC_VERSION}.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
   && rm -rf /tmp/*
 
-RUN groupadd -r -g 555 bitcoin && useradd -r -m -u 555 -g bitcoin bitcoin
-ENV DATADIR /data
+RUN groupadd -g 1000 bitcoin && useradd -u 1000 -G bitcoin -s /bin/sh -D bitcoin
 
-RUN mkdir "$DATADIR" \
-  && chown -R 555:555 "$DATADIR" \
-  && ln -sfn "$DATADIR" /home/bitcoin/.bitcoin \
-  && chown -h 555:555 /home/bitcoin/.bitcoin
+USER bitcoin
 
-VOLUME /data
+RUN mkdir -p /home/bitcoin/.bitcoin
+
+VOLUME /home/bitcoin/.bitcoin
 
 EXPOSE 8332 8333 18332 18333 28332 28333
 
-USER 555:555
 ENTRYPOINT ["bitcoind"]
