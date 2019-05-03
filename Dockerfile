@@ -7,8 +7,8 @@ RUN set -ex \
   && rm -rf /var/lib/apt/lists/*
 
 ARG BTC_VERSION=0.18.0
-ARG BTC_URL=https://bitcoin.org/bin/bitcoin-core-0.17.1/bitcoin-0.17.1-x86_64-linux-gnu.tar.gz
-ARG BTC_SHA256=53ffca45809127c9ba33ce0080558634101ec49de5224b2998c489b6d0fc2b17
+ARG BTC_URL=https://bitcoincore.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
+ARG BTC_SHA256=5e4e6890e07b620a93fdb24605dae2bb53e8435b2a93d37558e1db1913df405f
 
 RUN set -ex \
   && cd /tmp \
