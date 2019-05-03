@@ -28,4 +28,4 @@ VOLUME /home/bitcoin/.bitcoin
 #8332 - jsonrpc, 8333 - bitcoind p2p, 18332 - testnet jsonrpc, 18333 - testnet bitcoind p2p
 EXPOSE 8332 8333 18332 18333
 
-ENTRYPOINT ["bitcoind -printtoconsole"]
+ENTRYPOINT ["bitcoind"]
