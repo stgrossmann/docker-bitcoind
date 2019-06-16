@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+﻿FROM debian:stretch-slim
 MAINTAINER Stefan Großmann <39296252+stgrossmann@users.noreply.github.com>
 
 RUN set -ex \
@@ -7,7 +7,7 @@ RUN set -ex \
   && rm -rf /var/lib/apt/lists/*
 
 ARG BTC_VERSION=0.18.0
-ARG BTC_URL=https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-aarch64-linux-gnu.tar.gz
+ARG BTC_URL=https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
 ARG BTC_SHA256=53ffca45809127c9ba33ce0080558634101ec49de5224b2998c489b6d0fc2b17
 
 RUN set -ex \
