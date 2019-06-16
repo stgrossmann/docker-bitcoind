@@ -8,7 +8,7 @@ RUN set -ex \
 
 ARG BTC_VERSION=0.18.0
 ARG BTC_URL=https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
-ARG BTC_SHA256=53ffca45809127c9ba33ce0080558634101ec49de5224b2998c489b6d0fc2b17
+ARG BTC_SHA256=5146ac5310133fbb01439666131588006543ab5364435b748ddfc95a8cb8d63f
 
 RUN set -ex \
   && cd /tmp \
