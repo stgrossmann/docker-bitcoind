@@ -6,9 +6,9 @@ RUN set -ex \
   && apt-get install -qq --no-install-recommends dirmngr ca-certificates wget \
   && rm -rf /var/lib/apt/lists/*
 
-ARG BTC_VERSION=0.19.1
-ARG BTC_URL=https://bitcoin.org/bin/bitcoin-core-0.19.1/bitcoin-0.19.1-x86_64-linux-gnu.tar.gz
-ARG BTC_SHA256=5fcac9416e486d4960e1a946145566350ca670f9aaba99de6542080851122e4c
+ARG BTC_VERSION=0.20.1
+ARG BTC_URL=https://bitcoincore.org/bin/bitcoin-core-0.20.1/bitcoin-0.20.1-x86_64-linux-gnu.tar.gz
+ARG BTC_SHA256=376194f06596ecfa40331167c39bc70c355f960280bd2a645fdbf18f66527397
 
 RUN set -ex \
   && cd /tmp \
